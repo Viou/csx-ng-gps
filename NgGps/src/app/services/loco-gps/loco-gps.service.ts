@@ -14,10 +14,10 @@ export class LocoGpsService {
     region: this.apiKey.region
   });
 
-  getLocoGpsData(trainId: string, subdivision: string): Promise<any> {
-    return this.invokeAWS(trainId, subdivision);
+  getLocoGpsData(trainId: string, subdivision: string, locoId: string): Promise<any> {
+    return this.invokeAWS(trainId, subdivision, locoId);
   }
-  invokeAWS(trainId: string, subdivision): Promise<any> {
+  invokeAWS(trainId: string, subdivision, locoId): Promise<any> {
     const body = {};
     const bodyContents = [];
     if (trainId) {
@@ -25,6 +25,9 @@ export class LocoGpsService {
     }
     if (subdivision) {
       bodyContents.push(['trans_subdiv_c', subdivision]);
+    }
+    if (locoId) {
+      bodyContents.push(['loco_i', locoId]);
     }
     for (let i = 0; i < bodyContents.length; i++) {
       body[bodyContents[i][0]] = bodyContents[i][1];
