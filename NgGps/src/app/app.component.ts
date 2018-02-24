@@ -15,7 +15,7 @@ export class AppComponent {
   mainContentData = new MainContent();
 
   onSearchDataset(userInput: HeaderUserInput) {
-    this.locoGpsService.getLocoGpsData(userInput.trainId, userInput.subdivision)
+    this.locoGpsService.getLocoGpsData(userInput.trainId, userInput.subdivision, userInput.locoId)
       .then(results => this.mainContentService.buildMainContent(results))
       .then(mainContent => this.mainContentData = mainContent);
   }
