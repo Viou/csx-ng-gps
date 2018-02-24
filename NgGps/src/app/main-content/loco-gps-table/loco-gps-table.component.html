@@ -50,7 +50,7 @@
         </ng-container>
         <ng-container matColumnDef="stats">
             <mat-header-cell *matHeaderCellDef>Stats</mat-header-cell>
-            <mat-cell *matCellDef="let element" > <button mat-button (click)="randomize(element); tabGroup.selectedIndex = 1">
+            <mat-cell *matCellDef="let element" > <button mat-button (click)="randomize(element); tabGroup.selectedIndex = 3">
                 User Profile
               </button>
             </mat-cell>
@@ -71,6 +71,109 @@
 displayedColumns;"  ></mat-row>            
       </mat-table>
     </mat-tab>
+
+  <mat-tab label="Worst Rankings">
+  <mat-card class="example-card">
+      <h1>1</h1><mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+       <mat-card-title>{{ peopledata[0].name }}</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image style="height:250px; width:auto" src={{peopledata[0].url}} alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          {{ chosen.profileInfo }}
+        </p>
+        <p>
+            Likes:<mat-card-subtitle>{{peopledata[0].likes}}</mat-card-subtitle>
+            Reprimands:<mat-card-subtitle>{{peopledata[0].reprimands}}</mat-card-subtitle>
+    
+        </p>
+      </mat-card-content>
+      </mat-card>
+
+      <mat-card class="example-card" >
+          <h1>2</h1> <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{ peopledata[2].name }}</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image style="height:250px; width:auto" src={{peopledata[2].url}} alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              {{ peopledata[2].profileInfo }}
+            </p>
+            <p>
+                Likes:<mat-card-subtitle>{{peopledata[2].likes}}</mat-card-subtitle>
+                Reprimands:<mat-card-subtitle>{{peopledata[2].reprimands}}</mat-card-subtitle>
+        
+            </p>
+          </mat-card-content>
+          </mat-card>
+
+          <mat-card class="example-card" >
+              <h1>3</h1> <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{ peopledata[3].name }}</mat-card-title>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image style="height:250px; width:auto" src={{peopledata[3].url}} alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>
+                  {{ peopledata[3].profileInfo }}
+                </p>
+                <p>
+                    Likes:<mat-card-subtitle>{{peopledata[3].likes}}</mat-card-subtitle>
+                    Reprimands:<mat-card-subtitle>{{peopledata[3].reprimands}}</mat-card-subtitle>
+            
+                </p>
+              </mat-card-content>
+              </mat-card>
+
+        </mat-tab>
+
+        <mat-tab label="Best Rankings">
+                     
+                <mat-card class="example-card" >
+                    <h1>1</h1> <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{ peopledata[4].name }}</mat-card-title>
+                      <mat-card-subtitle>Cat Breed</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image style="height:250px; width:auto" src={{peopledata[4].url}} alt="Photo of a Shiba Inu">
+                    <mat-card-content>
+                      <p>
+                        {{ peopledata[4].profileInfo }}
+                      </p>
+                      <p>
+                          Likes:<mat-card-subtitle>{{peopledata[4].likes}}</mat-card-subtitle>
+                          Reprimands:<mat-card-subtitle>{{peopledata[4].reprimands}}</mat-card-subtitle>
+                  
+                      </p>
+                    </mat-card-content>
+                    </mat-card>
+          
+                    <mat-card class="example-card" >
+                        <h1>2</h1> <mat-card-header>
+                          <div mat-card-avatar class="example-header-image"></div>
+                          <mat-card-title>{{ peopledata[1].name }}</mat-card-title>
+                          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                        </mat-card-header>
+                        <img mat-card-image style="height:250px; width:auto" src={{peopledata[1].url}} alt="Photo of a Shiba Inu">
+                        <mat-card-content>
+                          <p>
+                            {{ peopledata[1].profileInfo }}
+                          </p>
+                          <p>
+                              Likes:<mat-card-subtitle>{{peopledata[1].likes}}</mat-card-subtitle>
+                              Reprimands:<mat-card-subtitle>{{peopledata[1].reprimands}}</mat-card-subtitle>
+                      
+                          </p>
+                        </mat-card-content>
+                        </mat-card>
+          
+                  </mat-tab>
+
     <mat-tab id="stats">
        <mat-card class="example-card">
   <mat-card-header>
@@ -98,6 +201,8 @@ displayedColumns;"  ></mat-row>
   </mat-card-actions>
 </mat-card>
   
+    
+
     </mat-tab>
 
 

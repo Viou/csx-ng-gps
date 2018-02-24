@@ -37,7 +37,7 @@ export class LocoGpsTableComponent implements OnInit {
   
     this.peopledata.push(new People ("Griffin", "./../../assets/images/griffin.jpg",1000000,0 , "Griffin's favorite part of being a conductor is honking the horn."));
     this.peopledata.push(new People ("Dennis", "./../../assets/images/dennis.jpg", 5, 5, "He likes the freedom of being on the open rail"));
-    this.peopledata.push(new People ("Bob", "./../../assets/images/bob.jpg", 100, 100, "Never met a speed ordiance that he liked. Likes waking up towns in the morning with his horn."));
+    this.peopledata.push(new People ("Bob", "./../../assets/images/bob.jpg", 1000, 100, "Never met a speed ordiance that he liked. Likes waking up towns in the morning with his horn."));
     this.peopledata.push(new People ("Jason", "./../../assets/images/jason.jpg", 50, 5, "Like to run trains fast, cheap and efficiently."));
     this.peopledata.push(new People ("Amanda", "./../../assets/images/amanda.jpg", 1, 500, "Likes catching train speeders."));
     this.chosen = this.peopledata[0];
