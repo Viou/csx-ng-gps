@@ -1,9 +1,14 @@
   <div class="loco-gps-table-container">
     <mat-card>
-      <mat-table [dataSource]="locoGpsData">
+        <div class="example-header">
+            <mat-form-field>
+              <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+            </mat-form-field>
+          </div>
+      <mat-table [dataSource]="dataSource">
         <ng-container matColumnDef="locoId">
           <mat-header-cell *matHeaderCellDef>LOCO ID</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.loco_i}}
+          <mat-cell *matCellDef="let element" > {{element.loco_i}}
           </mat-cell>
         </ng-container>
         <ng-container matColumnDef="trainId">
@@ -38,7 +43,7 @@
         </ng-container>
         <ng-container matColumnDef="speed">
           <mat-header-cell *matHeaderCellDef>SPEED</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.loco_speed_m}}
+          <mat-cell *matCellDef="let element" > {{element.loco_speed_m}}
           </mat-cell>
         </ng-container>
         <ng-container matColumnDef="stats">

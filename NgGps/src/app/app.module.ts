@@ -1,11 +1,12 @@
 import { MaterialModule } from './material/material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainContentService } from './services/main-content/main-content.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material';
+import { MatAutocompleteModule } from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -32,7 +33,9 @@ import { LargeIconCardComponent } from './main-content/large-icon-cards/large-ic
     FormsModule,
     MaterialModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule
   ],
   providers: [
     LocoGpsService,
