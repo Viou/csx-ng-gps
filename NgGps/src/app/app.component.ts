@@ -12,7 +12,7 @@ import { MainContent } from './shared/mainContent.model';
 export class AppComponent {
   title = 'app';
 
-  mainContentData: MainContent;
+  mainContentData = new MainContent();
 
   onSearchDataset(userInput: HeaderUserInput) {
     this.locoGpsService.getLocoGpsData(userInput.trainId, userInput.subdivision)
