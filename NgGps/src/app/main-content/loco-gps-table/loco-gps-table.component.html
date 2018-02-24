@@ -68,7 +68,7 @@
         <mat-header-row
           *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns:
-displayedColumns;"  ></mat-row>            
+displayedColumns;"  ></mat-row>
       </mat-table>
     </mat-tab>
 
@@ -87,7 +87,7 @@ displayedColumns;"  ></mat-row>
         <p>
             Likes:<mat-card-subtitle>{{peopledata[0].likes}}</mat-card-subtitle>
             Reprimands:<mat-card-subtitle>{{peopledata[0].reprimands}}</mat-card-subtitle>
-    
+
         </p>
       </mat-card-content>
       </mat-card>
@@ -106,7 +106,7 @@ displayedColumns;"  ></mat-row>
             <p>
                 Likes:<mat-card-subtitle>{{peopledata[2].likes}}</mat-card-subtitle>
                 Reprimands:<mat-card-subtitle>{{peopledata[2].reprimands}}</mat-card-subtitle>
-        
+
             </p>
           </mat-card-content>
           </mat-card>
@@ -125,7 +125,7 @@ displayedColumns;"  ></mat-row>
                 <p>
                     Likes:<mat-card-subtitle>{{peopledata[3].likes}}</mat-card-subtitle>
                     Reprimands:<mat-card-subtitle>{{peopledata[3].reprimands}}</mat-card-subtitle>
-            
+
                 </p>
               </mat-card-content>
               </mat-card>
@@ -133,7 +133,7 @@ displayedColumns;"  ></mat-row>
         </mat-tab>
 
         <mat-tab label="Best Rankings">
-                     
+
                 <mat-card class="example-card" >
                     <h1>1</h1> <mat-card-header>
                       <div mat-card-avatar class="example-header-image"></div>
@@ -148,11 +148,11 @@ displayedColumns;"  ></mat-row>
                       <p>
                           Likes:<mat-card-subtitle>{{peopledata[4].likes}}</mat-card-subtitle>
                           Reprimands:<mat-card-subtitle>{{peopledata[4].reprimands}}</mat-card-subtitle>
-                  
+
                       </p>
                     </mat-card-content>
                     </mat-card>
-          
+
                     <mat-card class="example-card" >
                         <h1>2</h1> <mat-card-header>
                           <div mat-card-avatar class="example-header-image"></div>
@@ -167,11 +167,11 @@ displayedColumns;"  ></mat-row>
                           <p>
                               Likes:<mat-card-subtitle>{{peopledata[1].likes}}</mat-card-subtitle>
                               Reprimands:<mat-card-subtitle>{{peopledata[1].reprimands}}</mat-card-subtitle>
-                      
+
                           </p>
                         </mat-card-content>
                         </mat-card>
-          
+
                   </mat-tab>
 
     <mat-tab id="stats">
@@ -194,14 +194,14 @@ displayedColumns;"  ></mat-row>
   </mat-card-content>
   <mat-card-actions>
     <button mat-button id="likes" (click)=userLike()>LIKE</button>
-    <button mat-button id="rep" (click)=userRepimend() style="background-color: red">Reprimend</button>
+    <button mat-button id="rep" (click)=userRepimend() style="background-color: red; color: white">Reprimand</button>
     <button mat-button style="background-color: yellow" (click)="tabGroup.selectedIndex = 0">
         Back
       </button>
   </mat-card-actions>
 </mat-card>
-  
-    
+
+
 
     </mat-tab>
 

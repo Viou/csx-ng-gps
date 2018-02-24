@@ -32,10 +32,7 @@ export class HeaderComponent implements OnInit {
   filteredOptions: Observable<string[]>;
 
   ngOnInit() {
-<<<<<<< HEAD
-=======
     this.userInput.subdivision = '';
->>>>>>> c137f7fff2dbb1cbcd97b505d147aaa95074855e
     this.userInput.trainId = 'CUMBED';
     this.filteredOptions = this.myControl.valueChanges
       .pipe(

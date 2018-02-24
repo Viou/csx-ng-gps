@@ -23,7 +23,7 @@ export class LocoGpsTableComponent implements OnInit {
   chosen : People;
   dataSource = new MatTableDataSource(this.locoGpsData);
   differ: any;
-  
+
 
   // displayedColumns = ['locoId', 'trainId', 'deviceId', 'lat', 'long', 'speed', 'signalStrength',
   //   'signalQuality', 'subdivision', 'reportDate']
@@ -34,7 +34,7 @@ export class LocoGpsTableComponent implements OnInit {
    }
 
   ngOnInit() {
-  
+
     this.peopledata.push(new People ("Griffin", "./../../assets/images/griffin.jpg",1000000,0 , "Griffin's favorite part of being a conductor is honking the horn."));
     this.peopledata.push(new People ("Dennis", "./../../assets/images/dennis.jpg", 5, 5, "He likes the freedom of being on the open rail"));
     this.peopledata.push(new People ("Bob", "./../../assets/images/bob.jpg", 1000, 100, "Never met a speed ordiance that he liked. Likes waking up towns in the morning with his horn."));
@@ -44,19 +44,19 @@ export class LocoGpsTableComponent implements OnInit {
 
   }
 
-  userLike(){
-    this.chosen.likes=this.chosen.likes+1;
-    (document.getElementById("likes")).innerHTML(this.chosen.likes);
+  userLike() {
+    this.chosen.likes = this.chosen.likes + 1;
+    (document.getElementById('likes')).innerHTML = String(this.chosen.likes);
   }
 
-  userRepimend(){
-    this.chosen.reprimands=this.chosen.reprimands+1;
-    (document.getElementById("rep")).innerHTML(this.chosen.reprimands);
+  userRepimend() {
+    this.chosen.reprimands = this.chosen.reprimands + 1;
+    document.getElementById('rep').innerHTML = String(this.chosen.reprimands);
   }
 
   ngDoCheck(){
-    var changes = this.differ.diff(this.locoGpsData);
-    if(changes) {
+    const changes = this.differ.diff(this.locoGpsData);
+    if (changes) {
       this.dataSource = new MatTableDataSource(this.locoGpsData);
     }
   }
