@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainContentService } from './services/main-content/main-content.service';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -28,7 +30,9 @@ import { LargeIconCardComponent } from './main-content/large-icon-cards/large-ic
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    MatButtonModule,
+    MatSelectModule
   ],
   providers: [
     LocoGpsService,

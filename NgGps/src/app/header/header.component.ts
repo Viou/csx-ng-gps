@@ -10,12 +10,13 @@ import { HeaderUserInput } from './../shared/headerUserInput.model';
 export class HeaderComponent implements OnInit {
 
   userInput = new HeaderUserInput();
+  subDivs = ['A', 'B'];
 
   constructor() { }
 
   ngOnInit() {
-    this.userInput.trainId = 'Q21602';
-    this.userInput.subdivision = 'C3';
+    this.userInput.trainId = 'CUMBED';
+    // this.userInput.subdivision = 'C3';
   }
 
   search() {

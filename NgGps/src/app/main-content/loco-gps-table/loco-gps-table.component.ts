@@ -12,7 +12,7 @@ export class LocoGpsTableComponent implements OnInit {
 
   // displayedColumns = ['locoId', 'trainId', 'deviceId', 'lat', 'long', 'speed', 'signalStrength',
   //   'signalQuality', 'subdivision', 'reportDate']
-  displayedColumns = ['locoId', 'trainId', 'subdivision', 'reportDate', 'speed']
+  displayedColumns = ['locoId', 'trainId', 'subdivision', 'lat', 'long', 'reportDate', 'speed', 'stats']
   constructor() { }
 
   ngOnInit() {

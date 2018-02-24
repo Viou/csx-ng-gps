@@ -17,12 +17,15 @@
         </div>
         <div class="user-input">
           <mat-form-field>
-            <input matInput placeholder="Subdivision"
-                   [(ngModel)]="userInput.subdivision">
+            <mat-select [(value)]="userInput.subdivision" placeholder="Subdivision">
+              <mat-option *ngFor="let subDiv of subDivs" [value]="subDiv">
+                {{ subDiv }}
+              </mat-option>
+            </mat-select>
           </mat-form-field>
         </div>
         <div class="user-input">
-          <button mat-raised-button color="primary" (click)="search()">Search</button>
+          <button mat-raised-button color="primary" (click)="search()">Search {{ userInput.subdivision }}</button>
         </div>
 </div>
 
