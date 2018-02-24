@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.userInput.trainId = 'Q21602';
+    this.userInput.trainId = '';
     this.userInput.subdivision = 'C3';
   }
 

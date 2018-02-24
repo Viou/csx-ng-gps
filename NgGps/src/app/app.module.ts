@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainContentService } from './services/main-content/main-content.service';
-
+import {MatButtonModule} from '@angular/material/button';
+import {MatTabsModule} from '@angular/material/';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,7 +14,7 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { LocoGpsTableComponent } from './main-content/loco-gps-table/loco-gps-table.component';
 import { LargeIconCardsComponent } from './main-content/large-icon-cards/large-icon-cards.component';
 import { LargeIconCardComponent } from './main-content/large-icon-cards/large-icon-card/large-icon-card.component';
-
+import { MatCardModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,10 @@ import { LargeIconCardComponent } from './main-content/large-icon-cards/large-ic
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    MatButtonModule,
+    MatTabsModule,
+    MatCardModule
   ],
   providers: [
     LocoGpsService,
