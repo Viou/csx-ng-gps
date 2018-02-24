@@ -1,0 +1,30 @@
+<div class="header">
+  <div class="header-top">
+    <div class="logo-container">
+      <img src="/assets/images/logo.svg">
+    </div>
+    <div class="header-left">
+      <div class="title">Team 5 Best Project</div>
+    </div>
+  </div>
+  <div class="header-bottom inner-wrapper">
+      <div class="user-input-container light-input">
+        <div class="user-input">
+          <mat-form-field>
+            <input matInput placeholder="Train ID"
+                   [(ngModel)]="userInput.trainId">
+          </mat-form-field>
+        </div>
+        <div class="user-input">
+          <mat-form-field>
+            <input matInput placeholder="Subdivision"
+                   [(ngModel)]="userInput.subdivision">
+          </mat-form-field>
+        </div>
+        <div class="user-input">
+          <button mat-raised-button color="primary" (click)="search()">Search</button>
+        </div>
+</div>
+
+  </div>
+</div>
