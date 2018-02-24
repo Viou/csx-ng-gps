@@ -19,13 +19,8 @@
           </mat-cell>
         </ng-container>
         <ng-container matColumnDef="subdivision">
-          <mat-header-cell *matHeaderCellDef>SUBDIVISION</mat-header-cell>
+          <mat-header-cell *matHeaderCellDef>SD</mat-header-cell>
           <mat-cell *matCellDef="let element"> {{element.trans_subdiv_c}}
-          </mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="reportDate">
-          <mat-header-cell *matHeaderCellDef>DATE</mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.report_est_d}}
           </mat-cell>
         </ng-container>
         <!--<ng-container matColumnDef="deviceId">-->
@@ -33,16 +28,21 @@
           <!--<mat-cell *matCellDef="let element"> {{element.device_i}}-->
           <!--</mat-cell>-->
         <!--</ng-container>-->
-        <!--<ng-container matColumnDef="lat">-->
-          <!--<mat-header-cell *matHeaderCellDef>LAT</mat-header-cell>-->
-          <!--<mat-cell *matCellDef="let element"> {{element.latitude_m}}-->
-          <!--</mat-cell>-->
-        <!--</ng-container>-->
-        <!--<ng-container matColumnDef="long">-->
-          <!--<mat-header-cell *matHeaderCellDef>LONG</mat-header-cell>-->
-          <!--<mat-cell *matCellDef="let element"> {{element.longitude_m}}-->
-          <!--</mat-cell>-->
-        <!--</ng-container>-->
+        <ng-container matColumnDef="lat">
+          <mat-header-cell *matHeaderCellDef>LAT</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.latitude_m}}
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="long">
+          <mat-header-cell *matHeaderCellDef>LONG</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.longitude_m}}
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="reportDate">
+          <mat-header-cell *matHeaderCellDef>DATE</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.report_est_d}}
+          </mat-cell>
+        </ng-container>
         <ng-container matColumnDef="speed">
           <mat-header-cell *matHeaderCellDef>SPEED</mat-header-cell>
           <mat-cell *matCellDef="let element" > {{element.loco_speed_m}}

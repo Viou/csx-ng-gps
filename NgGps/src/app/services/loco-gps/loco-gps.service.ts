@@ -18,12 +18,19 @@ export class LocoGpsService {
     return this.invokeAWS(trainId, subdivision);
   }
   invokeAWS(trainId: string, subdivision): Promise<any> {
-    let body = {};
-    if (trainId === '') {
-      body = {'trans_subdiv_c': subdivision};
-    } else {
-      body = { 'train_i': trainId, 'trans_subdiv_c': subdivision};
+    const body = {};
+    const bodyContents = [];
+    if (trainId) {
+      bodyContents.push(['train_i', trainId]);
     }
+    if (subdivision) {
+      bodyContents.push(['trans_subdiv_c', subdivision]);
+    }
+    for (let i = 0; i < bodyContents.length; i++) {
+      body[bodyContents[i][0]] = bodyContents[i][1];
+    }
+    console.log(bodyContents);
+    console.log(body);
     const promise = this.apigClient.rootPost('', body, '')
       .then(
         res => res.data

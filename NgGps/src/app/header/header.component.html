@@ -8,23 +8,29 @@
     </div>
   </div>
   <div class="header-bottom inner-wrapper">
-      <div class="user-input-container light-input">
-        <div class="user-input">
-          <mat-form-field>
-            <input matInput placeholder="Train ID"
-                   [(ngModel)]="userInput.trainId">
+    <div class="user-input-container light-input">
+      <div class="user-input">
+        <mat-form-field>
+          <input matInput placeholder="Train ID"
+                 [(ngModel)]="userInput.trainId">
+        </mat-form-field>
+      </div>
+      <div class="user-input">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input type="text" [(ngModel)]="userInput.subdivision" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{ option }}
+              </mat-option>
+            </mat-autocomplete>
           </mat-form-field>
-        </div>
-        <div class="user-input">
-          <mat-form-field>
-            <input matInput placeholder="Subdivision"
-                   [(ngModel)]="userInput.subdivision">
-          </mat-form-field>
-        </div>
-        <div class="user-input">
-          <button mat-raised-button color="primary" (click)="search()">Search</button>
-        </div>
-</div>
+        </form>
+      </div>
+      <div class="user-input">
+        <button mat-raised-button color="primary" (click)="search()">Search {{ userInput.subdivision }}</button>
+      </div>
+    </div>
 
   </div>
 </div>
