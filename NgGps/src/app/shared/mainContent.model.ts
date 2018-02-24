@@ -1,12 +1,12 @@
 import { LocoGpsData } from './locoGpsData.model';
+import { LargeIconCard } from './largeIconCard.model';
+import { LargeIconCardStyles } from './largeIconCardStyles.model';
+import { LocoGpsIcons } from './locoGpsIcons.model';
+
 export class MainContent {
   public locoGpsData: LocoGpsData[];
-  buildMainContent(locoGpsData: LocoGpsData[]): Promise<MainContent> {
-    return new Promise((resolve, reject) => {
-      const mainContent = new MainContent();
-      mainContent.locoGpsData = locoGpsData;
-      resolve(mainContent);
-    });
-  }
+  public largeIconCardList: LargeIconCard[] = new Array();
+
+
   constructor() {}
 }
