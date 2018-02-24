@@ -16,9 +16,15 @@
         </mat-form-field>
       </div>
       <div class="user-input">
+        <mat-form-field>
+          <input matInput placeholder="Loco ID"
+                 [(ngModel)]="userInput.locoId">
+        </mat-form-field>
+      </div>
+      <div class="user-input">
         <form class="example-form">
           <mat-form-field class="example-full-width">
-            <input type="text" [(ngModel)]="userInput.subdivision" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+            <input type="text" [(ngModel)]="userInput.subdivision" placeholder="Subdivision" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
             <mat-autocomplete #auto="matAutocomplete">
               <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                 {{ option }}

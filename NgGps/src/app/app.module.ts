@@ -8,8 +8,11 @@ import {MatTabsModule} from '@angular/material/';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material';
 import { MatAutocompleteModule } from '@angular/material';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> c137f7fff2dbb1cbcd97b505d147aaa95074855e
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LocoGpsService } from './services/loco-gps/loco-gps.service';
