@@ -1,0 +1,7 @@
+<div class="icon-cards-container">
+  <div class="icon-card" *ngFor="let iconCard of largeIconCardList">
+    <app-large-icon-card [title]="iconCard.title" [value]="iconCard.value"
+                         [styles]="iconCard.cardStyle"
+                         [icon]="iconCard.cardImage"></app-large-icon-card>
+  </div>
+</div>
