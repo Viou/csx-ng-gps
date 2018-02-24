@@ -4,16 +4,10 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainContentService } from './services/main-content/main-content.service';
-<<<<<<< HEAD
-import {MatButtonModule} from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/';
-=======
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material';
 import { MatAutocompleteModule } from '@angular/material';
-
->>>>>>> da41e5e144c5184201652d1563df8774d2df005c
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LocoGpsService } from './services/loco-gps/loco-gps.service';
@@ -38,14 +32,11 @@ import { MatCardModule } from '@angular/material';
     FormsModule,
     MaterialModule,
     MatButtonModule,
-<<<<<<< HEAD
     MatTabsModule,
-    MatCardModule
-=======
+    MatCardModule,
     MatSelectModule,
     MatAutocompleteModule,
     ReactiveFormsModule
->>>>>>> da41e5e144c5184201652d1563df8774d2df005c
   ],
   providers: [
     LocoGpsService,
