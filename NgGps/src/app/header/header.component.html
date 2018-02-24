@@ -1,16 +1,17 @@
 <div class="header">
   <div class="header-top">
     <div class="logo-container">
-      <img src="/assets/images/logo.svg">
+      <img src="/assets/images/yardNoNo.png">
+      <!-- <img src="/assets/images/logo.svg"> -->
     </div>
     <div class="header-left">
-      <div class="title">Team 5 Best Project</div>
+      <div class="title">Yard Naughty List</div>
     </div>
   </div>
   <div class="header-bottom inner-wrapper">
     <div class="user-input-container light-input">
       <div class="user-input">
-        <mat-form-field>
+        <mat-form-field class="test" >
           <input matInput placeholder="Train ID"
                  [(ngModel)]="userInput.trainId">
         </mat-form-field>
@@ -23,9 +24,11 @@
       </div>
       <div class="user-input">
         <form class="example-form">
+
           <mat-form-field class="example-full-width">
             <input type="text" [(ngModel)]="userInput.subdivision" placeholder="Subdivision" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
             <mat-autocomplete #auto="matAutocomplete">
+
               <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                 {{ option }}
               </mat-option>
