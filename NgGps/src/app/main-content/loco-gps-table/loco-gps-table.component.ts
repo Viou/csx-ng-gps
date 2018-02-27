@@ -46,12 +46,10 @@ export class LocoGpsTableComponent implements OnInit {
 
   userLike() {
     this.chosen.likes = this.chosen.likes + 1;
-    (document.getElementById('likes')).innerHTML = String(this.chosen.likes);
   }
 
   userRepimend() {
     this.chosen.reprimands = this.chosen.reprimands + 1;
-    document.getElementById('rep').innerHTML = String(this.chosen.reprimands);
   }
 
   ngDoCheck(){
